@@ -6,25 +6,35 @@
 
     <groupId>edu.cmu.lti.oaqa.lapps</groupId>
     <artifactId>dbpedia-spotlight</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0.0</version>
+    <parent>
+        <groupId>org.lappsgrid.maven</groupId>
+        <artifactId>war-parent-pom</artifactId>
+        <version>2.0.4</version>
+    </parent>
+    <packaging>war</packaging>
 
+    <!--
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
+    -->
 
     <repositories>
         <repository>
             <id>anc-releases</id>
+            <!--
             <url>http://www.anc.org:8080/nexus/content/repositories/releases/</url>
+            -->
+            <url>http://www.anc.org:8080/nexus</url>
             <releases>
                 <enabled>true</enabled>
             </releases>
             <snapshots>
-                <enabled>false</enabled>
+                <enabled>true</enabled>
             </snapshots>
         </repository>
     </repositories>
-
 
     <dependencies>
         <dependency>
@@ -60,6 +70,7 @@
     <build>
         <finalName>DBpediaSpotlightServices#${project.version}</finalName>
         <plugins>
+            <!--
             <plugin>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.0</version>
@@ -68,7 +79,7 @@
                     <target>1.8</target>
                 </configuration>
             </plugin>
-
+            -->
             <plugin>
                 <groupId>org.eclipse.jetty</groupId>
                 <artifactId>jetty-maven-plugin</artifactId>
