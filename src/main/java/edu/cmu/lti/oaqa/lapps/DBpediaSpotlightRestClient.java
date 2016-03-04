@@ -18,8 +18,8 @@ import java.net.URLEncoder;
 
 public class DBpediaSpotlightRestClient {
 
-
-    private static final String SPOTLIGHT_ENDPOINT = "http://spotlight.dbpedia.org/";
+    //private static final String SPOTLIGHT_ENDPOINT = "http://spotlight.dbpedia.org/";
+    private static final String SPOTLIGHT_ENDPOINT = "http://spotlight.sztaki.hu:2222/";
     private static final int NUM_RETRY = 3;
 
     private static final double CONFIDENCE = 0.0;
